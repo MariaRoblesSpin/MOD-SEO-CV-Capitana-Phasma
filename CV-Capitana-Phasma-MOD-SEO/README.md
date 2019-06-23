@@ -95,7 +95,6 @@ He empleado el esquema Person para destacar los siguientes datos que me han pare
   - name.
   - itemListElement.
 - award (x2).
-- url (en los enlaces a mis redes sociales, como si fueran los de la Capitana Phasma).
 
 Tal vez si hubiera sido un currículum real hubiera añadido el itemprop="email" y el itemprop="telephone". En este caso no tenía sentido.
 
