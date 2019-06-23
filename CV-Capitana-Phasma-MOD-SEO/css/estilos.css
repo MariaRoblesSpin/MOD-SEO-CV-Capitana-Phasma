@@ -1,0 +1,666 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1.5rem;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+@font-face {
+    font-family:                    titulos;
+    src:                            url(../fonts/sfdistantgalaxy.ttf);
+}
+@font-face {
+    font-family:                    texto;
+    src:                            url(../fonts/roboto-regular.ttf);
+}
+
+/* ---------------------------- *\
+        Estilos animaciones 
+\* ---------------------------- */
+@keyframes entradaDer {
+    0%{
+        opacity:                    0;
+        margin-left:                -500px;
+
+    }  
+    100%{
+        opacity:                    1;
+        margin-left:                0; 
+     }     
+}
+@keyframes entradaIzq {
+    0%{
+        opacity:                    0;
+        margin-right:               -500px;
+
+    }  
+    100%{
+        opacity:                    1;
+        margin-right:               0; 
+     }     
+}
+@keyframes crece {
+    0%{
+        opacity:                    0;
+    }  
+    100%{
+        font-size:                  1rem;
+     }     
+}
+@keyframes fundido {
+    0%{
+        opacity:                    0;
+    }  
+    100%{
+        opacity:                    0.9;
+     }     
+}
+.entradaDer {
+    animation-name:                 entradaDer;
+    animation-duration:             2s;
+    animation-timing-function:      cubic-bezier();
+    animation-fill-mode:            backwards;
+    -moz-animation-name:            entradaDer;
+    -moz-animation-duration:        2s;
+    -moz-animation-timing-function: cubic-bezier();
+    -moz-animation-fill-mode:       backwards;
+    -webkit-animation-name:         entradaDer;
+    -webkit-animation-duration:     2s;
+    -webkit-animation-timing-function: cubic-bezier();
+    -webkit-animation-fill-mode:    backwards;
+}
+.entradaIzq {
+    animation-name:                 entradaIzq;
+    animation-duration:             2s;
+    animation-timing-function:      cubic-bezier();
+    animation-fill-mode:            backwards;
+    -moz-animation-name:            entradaIzq;
+    -moz-animation-duration:        2s;
+    -moz-animation-timing-function: cubic-bezier();
+    -moz-animation-fill-mode:       backwards;
+    -webkit-animation-name:         entradaIzq;
+    -webkit-animation-duration:     2s;
+    -webkit-animation-timing-function: cubic-bezier();
+    -webkit-animation-fill-mode:    backwards;
+}
+.crece {
+    animation-name:                 crece;
+    animation-duration:             2s;
+    animation-timing-function:      cubic-bezier();
+    animation-fill-mode:            backwards;
+    animation-delay:                0.5s;
+    -moz-animation-name:            crece;
+    -moz-animation-duration:        2s;
+    -moz-animation-timing-function: cubic-bezier();
+    -moz-animation-fill-mode:       backwards;
+    -moz-animation-delay:           0.5s;
+    -webkit-animation-name:         crece;
+    -webkit-animation-duration:     2s;
+    -webkit-animation-timing-function: cubic-bezier();
+    -webkit-animation-fill-mode:    backwards;
+    -webkit-animation-delay:        0.5s;
+}
+.fundido {
+    animation-name:                 fundido;
+    animation-duration:             2s;
+    animation-timing-function:      cubic-bezier();
+    animation-fill-mode:            backwards;
+    animation-delay:                0.5s;
+    -moz-animation-name:            fundido;
+    -moz-animation-duration:        2s;
+    -moz-animation-timing-function: cubic-bezier();
+    -moz-animation-fill-mode:       backwards;
+    -moz-animation-delay:           0.5s;
+    -webkit-animation-name:         fundido;
+    -webkit-animation-duration:     2s;
+    -webkit-animation-timing-function: cubic-bezier();
+    -webkit-animation-fill-mode:    backwards;
+    -webkit-animation-delay:        0.5s;
+}
+.disolver {
+    animation-name:                 fundido;
+    animation-direction:            reverse;
+    animation-duration:             1s;
+    animation-timing-function:      cubic-bezier();
+    animation-fill-mode:            forwards;
+    animation-delay:                5s;
+    -moz-animation-name:            fundido;
+    -moz-animation-direction:       reverse;
+    -moz-animation-duration:        1s;
+    -moz-animation-timing-function: cubic-bezier();
+    -moz-animation-fill-mode:       forwards;
+    -moz-animation-delay:           5s;
+    -webkit-animation-name:         fundido;
+    -webkit-animation-direction:    reverse;
+    -webkit-animation-duration:     1s;
+    -webkit-animation-timing-function: cubic-bezier();
+    -webkit-animation-fill-mode:    forwards;
+    -webkit-animation-delay:        5s;
+}
+.disolver.ya {
+    animation-delay:                1s;
+    -moz-animation-delay:           1s;
+    -webkit-animation-delay:        1s;
+}
+/* ---------------------------- *\
+      FIN Estilos animaciones 
+\* ---------------------------- */
+/* --------------------------------------------- *\
+      Estilos elementos genéricos y variables. 
+\* --------------------------------------------- */
+:root {
+    --color-texto:                  black;
+    --color-fondo:                  white;
+    --color-aux:                    gray;
+    --color:                        rgb(124, 16, 32);
+    --radius:                       0.625rem;/*10px*/
+}
+* {
+    box-sizing:                     border-box;
+}
+html {
+    scroll-behavior:                smooth;
+}
+body {
+    font-family:                    texto; 
+    color:                          var(--color-texto);
+}
+.img-fluid {
+    width:                          100%;
+    border-radius:                  var(--radius);
+}
+main strong, 
+main p>a:link,
+form label>a:link {
+    color:                          var(--color);
+    font-weight:                    bold;
+    text-decoration:                none
+}
+main p>a:visited,
+form label>a:visited {
+    color:                          var(--color) !important;
+    text-decoration:                underline !important;
+}
+iframe {
+    margin:                         2rem 0;
+    width:                          100%;
+    height:                         50vh;
+}
+p {
+    padding:                        0.5rem 0;
+}
+
+blockquote {
+    display:                        flex;
+    align-items:                    center;
+    justify-content:                center;
+    font-family:                    titulos;
+    font-size:                      1.5rem;
+    color:                          var(--color);
+}
+blockquote p {
+    text-align:                     center;
+}
+.row, .row-contenido {
+    display:                        flex;
+    flex-wrap:                      wrap;
+    align-items:                    flex-start;
+}
+.home-wrapper header {
+    text-align:                     center;  
+}
+/* --------------------------------------------- *\
+    FIN Estilos elementos genéricos y variables. 
+\* --------------------------------------------- */
+/* ---------------------------- *\
+        Estilos encabezados 
+\* ---------------------------- */
+nav, h1, h2, h3 {
+    font-family:                    titulos;
+    font-weight:                    lighter;
+}
+h2 {
+    font-size:                      2rem;
+}
+h3 {
+    padding-bottom:                 0.3125rem;/*5px*/
+}
+section.home header h2 {
+    font-size:                      2.5rem;
+    line-height:                    2.5rem;
+}
+section.home header h2 span {
+    display:                        block;
+}
+.subtitulo {
+    margin-bottom:                  0.5rem;
+    font-weight:                    bold;
+    font-size:                      1.2em;
+}
+/* ---------------------------- *\
+     FIN estilos encabezados 
+\* ---------------------------- */
+/* -------------------------------- *\
+            Estilos listas 
+\* -------------------------------- */
+dl {
+    margin-bottom:                  2rem;
+}
+dt {
+    font-family:                    titulos;
+    font-weight:                    lighter;
+    font-size:                      1.1em;
+    color:                          var(--color);
+    margin-bottom:                  0.5rem;
+}
+dd {
+    margin-bottom:                  1.5rem;
+}
+dd:last-child {
+    margin-bottom:                  0;
+}
+main ul {
+    margin-bottom:                  2rem;
+}
+main ul li {
+    margin-bottom:                  1rem;
+    background:                     transparent url("../images/icono_lista_primera_orden.png") no-repeat top left;
+    list-style-position:            outside;
+    padding-left:                   1.875rem;/*30px*/
+    margin-top:                     1rem;
+    vertical-align:                 text-top;
+}
+main ul li strong {
+    color:                          var(--color-texto);
+}
+/* -------------------------------- *\
+          FIN Estilos listas 
+\* -------------------------------- */
+/* -------------------------------- *\
+    Estilos menú principal móvil 
+\* -------------------------------- */
+h1 {
+    float:                          left;
+}
+nav a.hide {
+    display:                        none !important;
+}
+.navegacion {
+    position:                       fixed;
+    z-index:                        10;
+    width:                          100%;
+}
+.boton-menu {
+    position:                       absolute;
+    width:                          100%;
+    z-index:                        15;
+    color:                          var(--color-fondo);
+    background-color:               var(--color);
+    padding:                        0.3125rem;/*5px*/
+}
+.boton-menu a {
+    float:                          right;
+    color:                          var(--color-fondo);
+    text-decoration:                none;
+    padding:                        0.3125rem;/*5px*/
+}
+.boton-menu a.fa-lg {
+    font-size:                      1.5em !important;
+}
+.desplegable {
+    position:                       fixed;
+    width:                          100%;
+    z-index:                        5;
+    background-color:               var(--color);
+    opacity:                        0.9;
+    height:                         16.25rem;/*260px*/
+    transition:                     all 0.5s ease-in-out;
+}
+.desplegable.hide {
+    margin-top:                     -16.25rem;/*-260px*/
+    position:                       relative;
+}
+.desplegable ul {
+    padding:                        2.7rem 2rem 3rem 2rem;
+}
+.desplegable ul li {  
+    border-bottom:                  1px solid var(--color-fondo);
+}
+.desplegable ul li:last-child {
+    border-bottom:                  0px;
+}
+.desplegable ul a {
+    display:                        inline-block;
+    padding:                        0.3rem 0.2rem;
+    color:                          var(--color-fondo);
+    text-decoration:                none;
+    width:                          100%;
+}
+.desplegable ul a.activo {
+    color:                          var(--color-texto);
+    text-decoration:                none;
+    font-size:                      1.2rem;
+}
+/* -------------------------------- *\
+   FIN Estilos menú principal móvil 
+\* -------------------------------- */
+/* -------------------------------- *\
+          Estilos secciones
+\* -------------------------------- */
+section {
+    margin:                         0 1rem;
+    padding-top:                    3.125rem;/*50px*/
+}
+section figure {
+    margin-top:                     1rem;
+    margin-bottom:                  0.5rem;
+}
+section figure figcaption{
+    margin-top:                     0.5rem;
+    margin-bottom:                  1rem;
+    font-size:                      0.8rem;
+    font-weight:                    700;
+    color:                          var(--color);
+    line-height:                    1.2rem;
+}
+section.home {
+    margin:                         0;
+    height:                         100vh;
+    background-image:               url(../images/Phasma_portada.png);
+    background-repeat:              no-repeat;
+    background-size:                cover;
+    background-position:            center center; 
+    color:                          var(--color-fondo);
+    display:                        flex;
+    flex-wrap:                      wrap;
+    justify-content:                center;
+    align-items:                    center;
+}
+/* -------------------------------- *\
+        FIN Estilos secciones 
+\* -------------------------------- */
+/* -------------------------------- *\
+            Estilos footers y aside
+\* -------------------------------- */
+footer, aside{
+    margin-top:                     1rem; 
+    padding:                        1.5rem;
+    font-size:                      0.9rem;
+    border:                         1px double var(--color);
+    border-radius:                  var(--radius);
+}
+aside h2 {
+    font-size:                      1.5rem;
+    padding-bottom:                 0.5rem;
+}
+aside ul {
+    margin-bottom:                  1rem;
+}
+aside ul li {
+    margin-bottom:                  0.5rem;
+    margin-top:                     0.5rem;
+}
+
+/* footer principal*/
+.main-wrapper>footer {
+    border:                         0;
+    display:                        flex;
+    flex-wrap:                      wrap;
+    align-items:                    center;
+    justify-content:                center;
+}
+.main-wrapper>footer nav {
+    width:                          100%;
+    display:                        flex;
+    justify-content:                center;
+}
+.main-wrapper>footer nav ul {
+    margin-bottom:                  0;
+}
+.main-wrapper>footer nav ul li {
+    display:                        inline-block;
+}
+footer ul li a:link,
+footer ul li a:visited{
+    color:                          var(--color);
+}
+
+/* -------------------------------- *\
+          FIN Estilos footer 
+\* -------------------------------- */
+/* -------------------------------- *\
+      Estilos formulario contacto
+\* -------------------------------- */
+.form-group {
+    margin-bottom:                  0.7rem;
+}
+.form-group .invisible{
+    display:                        none;
+}
+.form-group .visible{
+    display:                        block;
+}
+form ul li{
+    background:                     none;
+    padding-left:                   0;
+}
+form label[for="seleccion"] {
+    font-weight:                    bold;
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea{
+    width:                          100%;
+    border:                         1px solid gray;
+    border-radius:                  var(--radius);
+    padding:                        1rem;
+}
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="tel"]:focus,
+form textarea:focus{
+    width:                          100%;
+    border:                         2px solid var(--color);
+    outline:                        var(--color);
+    margin-bottom:                  0.5rem;
+}
+form legend {
+    font-weight:                    bold;
+    padding-bottom:                 0.5rem;
+}
+form select {
+    width:                          100%;
+    border:                         1px solid gray;
+    padding:                        0.5rem;
+}
+form select:focus {
+    width:                          100%;
+    border:                         2px solid var(--color);
+    outline:                        var(--color);
+    margin-bottom:                  0.5rem;
+}
+form button {
+    font-family:                    titulos;
+    font-size:                      1.4rem;
+    font-weight:                    100;
+    background-color:               var(--color);
+    color:                          var(--color-fondo);
+    border:                         2px solid transparent;
+    border-radius:                  var(--radius);
+    padding:                        1rem;
+}
+form button:hover {
+    background-color:               var(--color-fondo);
+    color:                          var(--color);
+    border:                         2px solid var(--color);
+    border-radius:                  var(--radius);;
+    padding:                        1rem;
+}
+form button:active {
+    background-color:               var(--color-fondo);
+    color:                          var(--color);
+    border:                         2px solid var(--color);
+    border-radius:                  var(--radius);
+    padding:                        1rem;
+}
+/* -------------------------------- *\
+  Estilos tooltip formulario contacto
+\* -------------------------------- */
+.tooltip-wrapper{
+    display:                        none;
+}
+.tooltip-wrapper.visible{
+    display:                        block;
+}
+.tooltip{
+    position:                       absolute;
+    left:                           0;
+    z-index:                        10;
+    width:                          70%;
+}
+.tooltip::after {
+    position:                       absolute;
+    bottom:                         1.375rem; /*22px*/
+    content:                        attr(title); /* este es el texto que será mostrado */
+    right:                          0;
+    /* el formato gráfico */
+    background:                     var(--color);
+    border-radius:                  var(--radius);
+    color:                          var(--color-fondo);
+    padding:                        1rem;
+    text-align:                     center;
+    width:                          9.375rem; /*150px*/
+}
+.tooltip::before {
+    position:                       absolute;
+    bottom:                         0.625rem; /*10px*/
+    content:                        "";
+    right:                          4rem;
+    /* el triángulo inferior */
+    border:                         solid;
+    border-color:                   var(--color) transparent;
+    border-width:                   0.75rem 0.75rem 0 0.75rem;
+}
+
+/* -------------------------------- *\
+    FIN Estilos formulario contacto
+\* -------------------------------- */
+
+/* -------------------------------- *\
+        Estilos condiciones
+\* -------------------------------- */
+
+section.home.condiciones .home-wrapper {
+    background-color: var(--color-texto);
+    border-radius: var(--radius);
+    opacity: 0.9;
+    margin: 3rem;
+    padding: 1rem;
+}
+
+
+/* -------------------------------- *\
+        Estilos media queries
+\* -------------------------------- */
+@media (max-width: 359px) {
+    h1 {
+        display:                    none
+    }
+}
+@media (min-width: 480px) {
+    section figure {
+        justify-self:               flex-end;
+        margin-left:                2rem;
+    }
+    .row{
+        flex-wrap:                  nowrap;
+    }
+}
+
+@media (min-width: 768px) {
+    .boton-menu{
+        display:                    none;
+    }
+    body header nav.desplegable.hide{
+        position:                   fixed;
+        margin-top:                 0;
+        height:                     100vh;
+        width:                      15.625rem; /*250px*/
+        background-color:           rgb(124, 16, 32)
+    }
+    .desplegable ul {
+        padding:                    2.2rem 1rem 3rem 1rem;
+    }
+    .main-wrapper{
+        margin-left:                15.625rem; /*250px*/
+    }
+    section {
+        margin:                     0 2rem;
+        padding-top:                2.5rem;
+    }
+}
+
+@media (min-width: 1024px) { 
+    section figure {
+        width:                      80%;
+    }
+    .row-contenido{
+        flex-wrap: nowrap;
+    }
+    .content-wrapper{
+        margin-right:               3rem;
+    }
+}
+
+@media (min-width: 1200px) { 
+    section figure {
+        width:                      50%;
+    }
+}
+@media (min-width: 1400px) { 
+    section figure {
+        width:                      30%;
+    }
+}
