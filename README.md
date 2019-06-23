@@ -1,4 +1,4 @@
-# CV-Capitana-Phasma-MOD-HTML-JAVASCRIPT
+# CV-Capitana-Phasma-MOD-SEO
 
 El currículum vitae web de la Capitana Phasma, un miembro relevante de la primera orden.
 
@@ -6,6 +6,9 @@ Es necesario instalar el módulo npm http-server para el visionado de la página
 https://www.npmjs.com/package/http-server
 
 y ejecutar el comando http-server en la terminal.
+
+En la carpeta CV-Capitana-Phasma-MOD-HTML-JAVASCRIPT-master está el código del comienzo de curso sin la optimización SEO.
+En la carpeta CV-Capitana-Phasma-MOD-SEO está el código optimizado.
 
 # Apuntes SEO
 
