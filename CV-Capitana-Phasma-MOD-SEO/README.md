@@ -97,7 +97,7 @@ He empleado el esquema Person para destacar los siguientes datos que me han pare
 - award (x2).
 
 Tal vez si hubiera sido un currículum real hubiera añadido el itemprop="email" y el itemprop="telephone". En este caso no tenía sentido.
-
+La información del apartado "Sobre mí" me ha parecido menos relevante y por eso no la he formateado con microdatos.
 
 ## Contenido
 
