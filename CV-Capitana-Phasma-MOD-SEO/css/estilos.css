@@ -266,11 +266,11 @@ h2 {
 h3 {
     padding-bottom:                 0.3125rem;/*5px*/
 }
-section.home header h2 {
+.home header h1 {
     font-size:                      2.5rem;
     line-height:                    2.5rem;
 }
-section.home header h2 span {
+.home header h1 span {
     display:                        block;
 }
 .subtitulo {
@@ -320,8 +320,10 @@ main ul li strong {
 /* -------------------------------- *\
     Estilos menú principal móvil 
 \* -------------------------------- */
-h1 {
+.titulo {
     float:                          left;
+    font-size:                      24px;
+    margin-left:                    1rem;
 }
 nav a.hide {
     display:                        none !important;
@@ -396,7 +398,7 @@ section figure {
     margin-top:                     1rem;
     margin-bottom:                  0.5rem;
 }
-section figure figcaption{
+section figure figcaption {
     margin-top:                     0.5rem;
     margin-bottom:                  1rem;
     font-size:                      0.8rem;
@@ -404,8 +406,9 @@ section figure figcaption{
     color:                          var(--color);
     line-height:                    1.2rem;
 }
-section.home {
+div.home {
     margin:                         0;
+    padding-top:                    3.125rem;/*50px*/
     height:                         100vh;
     background-image:               url(../images/Phasma_portada.png);
     background-repeat:              no-repeat;
@@ -592,7 +595,7 @@ form button:active {
         Estilos condiciones
 \* -------------------------------- */
 
-section.home.condiciones .home-wrapper {
+div.home.condiciones .home-wrapper {
     background-color: var(--color-texto);
     border-radius: var(--radius);
     opacity: 0.9;
