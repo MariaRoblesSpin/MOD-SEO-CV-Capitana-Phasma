@@ -424,23 +424,23 @@ div.home {
         FIN Estilos secciones 
 \* -------------------------------- */
 /* -------------------------------- *\
-            Estilos footers y aside
+            Estilos footers y div aside
 \* -------------------------------- */
-footer, aside{
+footer, .aside{
     margin-top:                     1rem; 
     padding:                        1.5rem;
     font-size:                      0.9rem;
     border:                         1px double var(--color);
     border-radius:                  var(--radius);
 }
-aside h2 {
+.aside h2 {
     font-size:                      1.5rem;
     padding-bottom:                 0.5rem;
 }
-aside ul {
+.aside ul {
     margin-bottom:                  1rem;
 }
-aside ul li {
+.aside ul li {
     margin-bottom:                  0.5rem;
     margin-top:                     0.5rem;
 }
